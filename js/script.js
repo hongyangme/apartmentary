@@ -295,7 +295,6 @@ $(document).ready(function() {
 
     wrap30.addEventListener('touchmove', (e) => {
         touchEndX = e.touches[0].clientX;
-        e.preventDefault(); // 터치 스크롤 막기(필요 시)
     }, { passive: false });
 
     wrap30.addEventListener('touchend', () => {
@@ -319,7 +318,6 @@ $(document).ready(function() {
 
     wrapOld.addEventListener('touchmove', (e) => {
         touchEndX = e.touches[0].clientX;
-        e.preventDefault();
     }, { passive: false });
 
     wrapOld.addEventListener('touchend', () => {
@@ -343,7 +341,6 @@ $(document).ready(function() {
 
     wrapRb.addEventListener('touchmove', (e) => {
         touchEndX = e.touches[0].clientX;
-        e.preventDefault();
     }, { passive: false });
 
     wrapRb.addEventListener('touchend', () => {
