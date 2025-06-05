@@ -293,6 +293,7 @@ $(document).ready(function() {
 
     $('.wrap_30').on('touchmove', function (e) {
         touchEndX = e.originalEvent.touches[0].clientX;
+        e.preventDefault();
     });
 
     $('.wrap_30').on('touchend', function () {
@@ -315,6 +316,7 @@ $(document).ready(function() {
 
     $('.wrap_old').on('touchmove', function (e) {
         touchEndX = e.originalEvent.touches[0].clientX;
+        e.preventDefault();
     });
 
     $('.wrap_old').on('touchend', function () {
@@ -337,6 +339,7 @@ $(document).ready(function() {
 
     $('.wrap_rb').on('touchmove', function (e) {
         touchEndX = e.originalEvent.touches[0].clientX;
+        e.preventDefault();
     });
 
     $('.wrap_rb').on('touchend', function () {
