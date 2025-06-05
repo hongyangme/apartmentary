@@ -284,19 +284,19 @@ $(document).ready(function() {
 
     //모바일 터치 스크립트
     //// 터치 슬라이드 (섹션 3)
-    let startX = 0;
-    let endX = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
     $('.wrap_30').on('touchstart', function (e) {
-        startX = e.originalEvent.touches[0].clientX;
+        touchStartX = e.originalEvent.touches[0].clientX;
     });
 
     $('.wrap_30').on('touchmove', function (e) {
-        endX = e.originalEvent.touches[0].clientX;
+        touchEndX = e.originalEvent.touches[0].clientX;
     });
 
     $('.wrap_30').on('touchend', function () {
-        let diff = startX - endX;
+        let diff = touchStartX - touchEndX;
 
         if (Math.abs(diff) > 50) { // 민감도 설정
             if (diff > 0 && cnt2 < totalSlides) {
@@ -310,15 +310,15 @@ $(document).ready(function() {
     });
     ////섹션4
     $('.wrap_old').on('touchstart', function (e) {
-        startX = e.originalEvent.touches[0].clientX;
+        touchStartX = e.originalEvent.touches[0].clientX;
     });
 
     $('.wrap_old').on('touchmove', function (e) {
-        endX = e.originalEvent.touches[0].clientX;
+        touchEndX = e.originalEvent.touches[0].clientX;
     });
 
     $('.wrap_old').on('touchend', function () {
-        let diff = startX - endX;
+        let diff = touchStartX - touchEndX;
 
         if (Math.abs(diff) > 50) { // 민감도 설정
             if (diff > 0 && cnt3 < totalSlides2) {
@@ -332,15 +332,15 @@ $(document).ready(function() {
     });
     ////섹션5
     $('.wrap_rb').on('touchstart', function (e) {
-        startX = e.originalEvent.touches[0].clientX;
+        touchStartX = e.originalEvent.touches[0].clientX;
     });
 
     $('.wrap_rb').on('touchmove', function (e) {
-        endX = e.originalEvent.touches[0].clientX;
+        touchEndX = e.originalEvent.touches[0].clientX;
     });
 
     $('.wrap_rb').on('touchend', function () {
-        let diff = startX - endX;
+        let diff = touchStartX - touchEndX;
 
         if (Math.abs(diff) > 50) { // 민감도 설정
             if (diff > 0 && cnt4 < totalSlides3) {
