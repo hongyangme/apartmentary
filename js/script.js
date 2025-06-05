@@ -287,19 +287,20 @@ $(document).ready(function() {
     let touchStartX = 0;
     let touchEndX = 0;
 
-    $('.wrap_30').on('touchstart', function (e) {
-        touchStartX = e.originalEvent.touches[0].clientX;
-    });
+    // 섹션 3
+    const wrap30 = document.querySelector('.wrap_30');
+    wrap30.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
 
-    $('.wrap_30').on('touchmove', function (e) {
-        touchEndX = e.originalEvent.touches[0].clientX;
-        e.preventDefault();
-    });
+    wrap30.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
+        e.preventDefault(); // 터치 스크롤 막기(필요 시)
+    }, { passive: false });
 
-    $('.wrap_30').on('touchend', function () {
-        let diff = touchStartX - touchEndX;
-
-        if (Math.abs(diff) > 50) { // 민감도 설정
+    wrap30.addEventListener('touchend', () => {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
             if (diff > 0 && cnt2 < totalSlides) {
                 cnt2++;
             } else if (diff < 0 && cnt2 > 0) {
@@ -309,20 +310,21 @@ $(document).ready(function() {
             swiperSlide();
         }
     });
-    ////섹션4
-    $('.wrap_old').on('touchstart', function (e) {
-        touchStartX = e.originalEvent.touches[0].clientX;
-    });
 
-    $('.wrap_old').on('touchmove', function (e) {
-        touchEndX = e.originalEvent.touches[0].clientX;
+    // 섹션 4
+    const wrapOld = document.querySelector('.wrap_old');
+    wrapOld.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    wrapOld.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
         e.preventDefault();
-    });
+    }, { passive: false });
 
-    $('.wrap_old').on('touchend', function () {
-        let diff = touchStartX - touchEndX;
-
-        if (Math.abs(diff) > 50) { // 민감도 설정
+    wrapOld.addEventListener('touchend', () => {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
             if (diff > 0 && cnt3 < totalSlides2) {
                 cnt3++;
             } else if (diff < 0 && cnt3 > 0) {
@@ -332,27 +334,28 @@ $(document).ready(function() {
             swiperSlide2();
         }
     });
-    ////섹션5
-    $('.wrap_rb').on('touchstart', function (e) {
-        touchStartX = e.originalEvent.touches[0].clientX;
-    });
 
-    $('.wrap_rb').on('touchmove', function (e) {
-        touchEndX = e.originalEvent.touches[0].clientX;
+    // 섹션 5
+    const wrapRb = document.querySelector('.wrap_rb');
+    wrapRb.addEventListener('touchstart', (e) => {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+
+    wrapRb.addEventListener('touchmove', (e) => {
+        touchEndX = e.touches[0].clientX;
         e.preventDefault();
-    });
+    }, { passive: false });
 
-    $('.wrap_rb').on('touchend', function () {
-        let diff = touchStartX - touchEndX;
-
-        if (Math.abs(diff) > 50) { // 민감도 설정
+    wrapRb.addEventListener('touchend', () => {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 50) {
             if (diff > 0 && cnt4 < totalSlides3) {
                 cnt4++;
             } else if (diff < 0 && cnt4 > 0) {
                 cnt4--;
             }
-        rvSlide();
-        swiperSlide3();
+            rvSlide();
+            swiperSlide3();
         }
     });
 });
