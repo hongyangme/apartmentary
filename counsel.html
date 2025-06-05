@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/counsel_style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/counsel_script.js"></script>
+    <title>아파트멘터리 - 상담신청</title>
+</head>
+<body>
+    <header>
+        <div class="header_wrap">
+            <h1 class="logo_h">
+                <a href="./index.html">
+                    <img src="img/icon/logo_h.svg" alt="logo">
+                </a>
+            </h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">포트폴리오</a></li>
+                    <li><a href="#">서비스 소개</a></li>
+                    <li><a href="#">읽을거리</a></li>
+                    <li><a href="#">상담 신청
+                        <span>EASY</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="m_header_wrap">
+            <h1 class="m_logo_h">
+                <a href="./index.html">
+                <img src="img/icon/m_logo_h.svg" alt="m_logo">
+                </a>
+            </h1>
+            <div class="m_hamburger">
+                <img src="img/icon/m_hamburger.svg" alt="hamburger">
+            </div>
+            <div class="m_close">
+                <img src="img/icon/m_close_icon.svg" alt="close">
+            </div>
+        </div>
+        <nav class="m_nav_wrap">
+            <div class="m_line"></div>
+            <ul class="m_nav">
+                <li><a href="#">
+                    <p>서비스 소개</p>
+                    <img src="img/icon/arrow_more.svg" alt="">
+                </a></li>
+                <li><a href="#">
+                    <p>포트폴리오</p>
+                    <img src="img/icon/arrow_more.svg" alt="">
+                </a></li>
+                <li><a href="#">
+                    <p>읽을거리</p>
+                    <img src="img/icon/arrow_more.svg" alt="">
+                </a></li>
+                <li><a href="#">
+                    <p>아파트멘터리 소개</p>
+                    <img src="img/icon/arrow_more.svg" alt="">
+                </a></li>
+            </ul>
+            <div class="m_line"></div>
+            <ul class="m_nav">
+                <li><a href="#">
+                    <p>회사 소개</p>
+                    <img src="img/icon/arrow_more.svg" alt="">
+                </a></li>
+                <li><a href="#">
+                    <p>직영점 안내</p>
+                    <img src="img/icon/arrow_more.svg" alt="">
+                </a></li>
+                <li><a href="#">
+                    <p>자주 묻는 질문</p>
+                    <img src="img/icon/arrow_more.svg" alt="">
+                </a></li>
+            </ul>
+            <div class="m_line"></div>
+            <div class="counsel">
+                <a href="#">
+                    상담 신청
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="main_wrap">
+            <section class="sec01">
+                <div class="notice_box">
+                    <h2>부담 없는
+리모델링 상담 신청</h2><p>시작부터 끝까지 투명하고 편리한
+아파트멘터리 서비스를 경험하세요.</p></div>
+                <img src="img/main/estimate.jpg" alt="">
+            </section>
+            <section class="sec02">
+                <div class="form_box">
+                    <h2>신청서 작성</h2><p>아래 정보를 기입하고 신청하면
+전문 매니저와의 상담을 안내해 드립니다.</p><div class="border"></div>
+                </div>
+                <form method="post" action="counsel.php"> 
+                    <fieldset>
+                        <legend class="hidden">인테리어 상담 신청</legend>
+                        <ul>
+                            <div class="nNt">
+                                <li class="name">
+                                    <label for="name">이름 <span> * </span></label>
+                                    <input type="text" name="name" placeholder="성함을 입력해 주세요." required>
+                                </li>
+                                <li class="tel">
+                                    <label>연락처 <span> * </span></label>
+                                    <input type="tel" name="contact" placeholder="연락처를 알려주세요." required>
+                                </li>
+                            </div>
+                            <li class="address">
+                                <label>주소 <span> * </span></label>
+                                <input type="address" name="address" placeholder="시공하려는 아파트 주소를 알려주세요." required>
+                                <button>검색</button>
+                            </li>
+                            <li class="branch">
+                                <label>상담 희망 직영점</label>
+                                <input type="text" name="" list="branch" placeholder="선택하세요.">
+                                <datalist id="branch">
+                                    <option value="" disabled selected>선택하세요.</option>
+                                    <option value="스포크 광교">스포크 광교</option>
+                                    <option value="스포크 광진">스포크 광진</option>
+                                    <option value="스포크 동탄">스포크 동탄</option>
+                                    <option value="스포크 마곡">스포크 마곡</option>
+                                    <option value="스포크 마포">스포크 마포</option>
+                                </datalist>
+                            </li>
+                            <li class="remodeling">
+                                <label>리모델링 서비스 선택 <span> * </span></label><br>
+                                <div class="button_box">
+                                    <button type="button" class="buttonR" onclick="toggleActive(this)">필수 공정으로 공간을 정돈하는 <span>에센셜</span></button>
+                                    <button type="button" class="buttonR" onclick="toggleActive(this)">커스터마이즈 디자인의 <span>프리미엄</span></button>
+                                    <button type="button" class="buttonR" onclick="toggleActive(this)">아파트 인테리어 이상의 디자인, <span>콜렉션</span> </button>
+                                    <button type="button" class="buttonR" onclick="toggleActive(this)">선택 안 함</button>
+                                    <input type="hidden" name="remodeling_service" id="remodeling_service">
+                                </div>
+                            </li>
+                            <li class="addon">
+                                <label>애드온 서비스 선택 <span> * </span></label><br>
+                                <div class="button_box">
+                                    <button type="button" class="buttonA" onclick="toggleActive(this)">키친</button>
+                                    <button type="button" class="buttonA" onclick="toggleActive(this)">가든</button>
+                                    <button type="button" class="buttonA" onclick="toggleActive(this)" disabled>펫</button>
+                                    <button type="button" class="buttonA" onclick="toggleActive(this)" disabled>스타일</button>
+                                    <button type="button" class="buttonA" onclick="toggleActive(this)">선택 안 함</button>
+                                    <input type="hidden" name="addon_service" id="addon_service">
+                                </div>
+                            </li>
+                            <div class="dNb">
+                            <li class="due">
+                                <label>예상 공사 시기</label>
+                                <input type="text" name="" list="due" placeholder="선택하세요.">
+                                <datalist id="due">
+                                    <option value="" disabled selected>선택하세요.</option>
+                                    <option value="2024년">2024년</option>
+                                    <option value="2025년">2025년</option>
+                                    <option value="2026년">2026년</option>
+                                </datalist>
+                            </li>
+                            <li class="budget">
+                                <label>최대 예산 <span> * </span></label>
+                                <input type="text" name="" list="budget" placeholder="선택하세요.">
+                                <datalist id="budget">
+                                    <option value="" disabled selected>선택하세요.</option>
+                                    <option value="5000만원 미만">5000만원 미만</option>
+                                    <option value="1억 미만">1억 미만</option>
+                                    <option value="1억 초과">1억 초과</option>
+                                </datalist>
+                            </li>
+                        </div>
+                            <li class="agree">
+                                <label>개인정보처리방침에 동의합니다.</label>
+                                <button>전문</button>
+                                <input type="" name="agree">
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button class="submit" type="submit">상담 신청하기</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <aside>
+        <button class="go_top">
+                <img src="./img/icon/up_icon.svg" alt="up">
+        </button>
+        <button>
+            <a href="">
+                <p>직영점
+안내</p>
+            </a>
+        </button>
+        <button class="inquiry">
+            <p>1:1
+문의</p>
+    <div class="inquiry_w">
+        <div class="top">
+            <p>고객센터</p>
+            <img class="close_w" src="./img/icon/m_close_icon.svg" alt="">
+        </div>
+        <div class="inside">
+            <p><span>영업시간</span>
+
+평일 09:00 - 18:00
+
+
+<span>전화번호</span>
+
+02 - 6356 - 1224
+            </p>
+        </div>
+        <div class="bottom">
+            <a href="#">
+            <p>1:1 문의하기</p>
+        </a>
+        </div>
+    </div>
+    </button>
+        <button>
+            <a href="./counsel.html">
+                <p>상담
+신청</p>
+            </a>
+        </button>
+    </aside>
+</body>
+</html>

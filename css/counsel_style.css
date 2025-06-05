@@ -1,0 +1,760 @@
+@font-face {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    src: url('../fonts/SpoqaHanSansNeo-Regular.otf') format('otf');
+}
+@font-face{
+    font-family: 'Decimal','sans-serif';
+    src: url('../fonts/Decimal-Medium.otf') format('otf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    box-sizing: border-box;
+    word-break: keep-all;
+}
+
+a{
+    text-decoration: none;
+    color: #212121;
+}
+li{
+    list-style: none;
+}
+p{
+    line-height: 28px;
+}
+
+/* 헤더 */
+header{
+    width: 100vw;
+    height: 118px;
+    align-items: center;
+    display: flex;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    transition: 0.2s;
+}
+
+.header_wrap{
+    align-items: center;
+    display: flex;
+    padding: 0 40px ;
+}
+.logo_h{
+    width: 157px;
+    height: 50px;
+    margin: 0 100px 0 0;
+    display: inline-block;
+}
+
+.logo_h img{
+    width: 100%;
+}
+
+.gnb{
+    display: flex
+}
+.gnb>li{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+.gnb>li>a{
+    display: block;
+    align-items: center;
+    display: flex;
+    padding: 15px 20px;
+}
+.gnb>li>a>span{
+    font-family: 'Decimal','sans-serif';
+    background-color: rgb(254, 235, 143);
+    font-size: 8px;
+    padding: 5px 8px;
+    height: 24px;
+    border-radius: 20px;
+    line-height: 1.8;
+    margin-left: 2px;
+}
+
+/* 호버 설정 */
+.m_header_wrap{
+    display: none;
+}
+
+.m_br{
+    display: none;
+}
+.m_nav_wrap{
+    display: none;
+}
+.slide_box .more a{
+    transition: 0.3s;
+}
+.slide_box .more:hover a{
+    background-color: rgba(85, 85, 85, 0.1);
+    transition: 0.3s;
+}
+
+.button_box button:hover{
+    background-color: rgba(85, 85, 85, 0.1);
+    transition: 0.3s;
+    border-color: #13130A;;
+}
+.button_box button.active{
+    background-color: rgba(85, 85, 85, 0.1);
+    transition: 0.3s;
+    border-color: #13130A;;
+}
+.gnb > li{
+    transition: 0.3s;
+}
+.gnb > li:hover{
+    background-color: rgba(85, 85, 85, 0.05);
+    transition: 0.3s;
+    border-radius: 50px;
+}
+.more_button:hover{
+    box-shadow: 0 10px 10px -5px rgb(183, 183, 183);
+    transition: 0.3s;
+}
+
+/* 메인 */
+#main_wrap{
+    width: 100%;
+    height: 100%;
+    padding: 0 12.5px;
+    max-width: 1340px;
+    margin: 118px auto;
+    position: relative;
+    display: flex;
+}
+
+/* 섹션1 */
+.sec01{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 43px;
+    padding-right: 21.5px;
+    float: left;
+    padding-top: 43px;
+    position: relative;
+    margin-right: 80px;
+}
+.notice_box{
+    white-space: pre-wrap;
+    word-break: keep-all;
+    flex: 1 1 0;
+    padding-bottom: 140px;
+    padding: 0px 0px 140px 0px;
+    width: 100%;
+}
+.notice_box h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 12px;
+}
+.sec01 img{
+    max-width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: left center;
+    overflow: clip;
+}
+
+/* 섹션2 */
+.sec02{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding:  43px 43px 0px 21.5px;
+}
+.form_box{
+    white-space: pre-wrap;
+    word-break: keep-all;
+    padding-left: 27px;
+    display: inline-block; 
+}
+.form_box h2{
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 12px;
+}
+.border{
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+.border::after{
+    width: 100%;
+    height: ;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    border-bottom: 2px solid rgb(229, 231, 235)
+}
+
+.hidden{
+    display: none;
+}
+
+/* 필드셋 */
+fieldset{
+    border: none;
+}
+label{
+    font-weight: 600;
+    font-size: 14px;
+}
+label > span{
+    color: rgb(184, 0, 0);
+}
+button{
+    cursor: pointer;
+    color: #13130A;
+}
+input{
+    border: none;
+    background-color: transparent;
+    margin-left: 11px;
+    border-bottom: 1px solid gray;
+    border-radius: 0;
+    width: ;
+    box-sizing: content-box;
+    flex-grow: 1;
+    padding-bottom: 12px;
+}
+input::placeholder{
+    color: rgba(0, 0, 0, 0.42);
+}
+input:focus{
+    box-shadow: none;
+    border-bottom: 2px solid #13130A;
+    outline: none;
+}
+input:hover{
+    border-bottom: 1px solid #13130A;
+}
+fieldset ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+fieldset ul li{
+    display: flex;
+    padding: 40px 0 0 27px;
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.nNt, .dNb{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.name{
+    /* flex-basis: 50%;
+    flex-grow: 1; */
+    width: 50%;
+    display: inline-flex;
+    float: left;
+}
+.tel{
+    width: 50%;
+    float: left;
+    display: inline-flex;
+}
+.address{
+    width: 100%;
+    position: relative;
+}
+.address label{
+}
+.address input{
+    display: flex;
+    cursor: pointer;
+}
+.address button{
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    font-weight: 600;
+}
+.branch{
+    width: 100%;
+}
+.branch label{
+    display: block;
+    width: 100%;
+}
+.branch input{
+    margin: 14px 0 0 0;
+    cursor: pointer;
+}
+
+.remodeling{
+    width: 100%;
+    display: flex;
+    
+}
+.remodeling label{
+    display: block;
+    width: 100%;
+}
+.button_box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.remodeling button{
+    float: left;
+    /* margin-right: 16px; */
+    margin: 14px 0 0 16px;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    height: 53px;
+    border: 1px solid rgba(19, 19, 10, 0.2);
+    border-radius: 5px;
+    flex-basis: calc(50% - 16px);
+    flex-grow: 1;
+}
+.remodeling button:nth-child(odd) {
+    margin-left: 0; /* 짝수 번째 버튼은 오른쪽 마진 제거 */
+}
+
+.button > span{
+    font-weight: 600;
+}
+.addon{
+    width: 100%;
+    display: flex;
+}
+.addon label{
+    display: block;
+    width: 100%;
+}
+.addon button{
+    float: left;
+    margin: 14px 0 0 16px;
+    text-align: center;
+    align-items: center;
+    background-color: white;
+    height: 53px;
+    border: 1px solid rgba(19, 19, 10, 0.2);
+    border-radius: 5px;
+    flex-basis: calc(50% - 16px);
+    flex-grow: 1;
+}
+.addon button:nth-child(odd) {
+    margin-left: 0; /* 짝수 번째 버튼은 오른쪽 마진 제거 */
+}
+.due{
+    width: 50%;
+}
+.due label{
+    width: 100%;
+}
+.due input{
+    margin: 14px 0 0 0;
+    cursor: pointer;
+}
+.budget{
+    width: 50%;
+}
+.budget label{
+    width: 100%;
+}
+.budget input{
+    margin: 14px 0 0 0;
+    cursor: pointer;
+}
+.agree{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.agree label{
+}
+.agree button{
+    display: block;
+    float: right;
+}
+.agree input{
+    display: block;
+    width: 100%;
+    margin-left: 0;
+    cursor: pointer;
+    pointer-events: none;
+}
+.agree button{
+    position: absolute;
+    right: 0;
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.submit{
+    float: right;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.36);
+    height: 70px;
+    padding: 0 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+}
+.buttonA:disabled{
+    color: rgba(0, 0, 0, 0.26);
+    background-color: rgb(249, 250, 251);
+    cursor: default;
+}
+.buttonA:disabled:hover {
+    background-color: rgb(249, 250, 251);
+    border-color: rgba(19, 19, 10, 0.2);
+}
+
+
+/* 플로팅 버튼 */
+aside{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    bottom: 45px;
+    right: 45px;
+}
+aside button{
+    width: 65px;
+    height: 65px;
+    background-color: #212121;
+    border-radius: 50px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+aside button p{
+    font-weight: 600;
+    color: white;
+    line-height: 1.5;
+    white-space: break-spaces;
+    font-size: 14px;
+}
+aside button a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+aside button:nth-child(4){
+    background-color: rgb(254, 235, 143);
+    display: none;
+}
+aside button:nth-child(4) p{
+    color: #212121;
+}
+aside button:nth-child(1){
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+}
+aside button:nth-child(1).visible{
+    transition: 0.2s;
+    opacity: 1;
+    visibility: visible;
+}
+.inquiry{
+    position: relative;
+    cursor: pointer;
+}
+.inquiry_w{
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    border-radius: 32px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: none;
+    cursor: default;
+}
+.inquiry p{
+    letter-spacing: 1.5px;
+}
+.top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #212121;
+    display: block;
+    float: left;
+}
+.top .close_w{
+    cursor: pointer;
+}
+.top > p{
+    color: white;
+    text-align: center;
+    margin-top: 22px;
+    margin-left: 27px;
+    display: inline-block;
+}
+.top img{
+    filter: invert(100%) sepia(89%) saturate(1%) hue-rotate(203deg) brightness(109%) contrast(98%);
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #212121;
+}
+.bottom p{
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+.inside{
+    display: block;
+    float: left;
+    width: 100%;
+    height: 180px;
+    margin-top: 60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 20px 0;
+    position: relative;
+}
+.inside p{
+    color: #212121;
+    font-weight: 400;
+    line-height: 17px;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.inside p span{
+    font-weight: 600;
+}
+
+
+
+
+/* 미디어쿼리-Mobile */
+@media only screen and (max-width:1169px){
+
+    body{
+        font-size: 14px;
+        line-height: 23px;
+    }
+    
+   /* 헤더 */
+header{
+    height: 65px;
+}
+.header_wrap{
+    display: none;
+    transition: 0.2s;
+}
+.m_header_wrap{
+    display: block;
+    /* background-color: white; */
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.m_logo_h{
+}
+.m_logo_h img{
+    width: 100%;
+    height: 100%;
+}
+.m_hamburger{
+    height: 25px;
+    overflow: visible;
+    cursor: pointer;
+}
+.m_hamburger img{
+    width: 25px;
+    height: 25px;
+}
+
+.m_nav_wrap{
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: white;
+    top: 60px;
+}
+.m_line{
+    width: 90%;
+    height: 70px;
+    margin: 0 auto;
+    position: relative;
+}
+.m_line::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 100%;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.m_nav li a{
+    width: 90%;
+    height: ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+.m_nav li a p{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.counsel{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    left: 0;
+    bottom: 0px;
+    line-height: 60px;
+    text-align: center;
+}
+.counsel a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(254, 235, 143);
+    font-size: 16px;
+    font-weight: 500;
+}
+.m_close{
+    display: none;
+    height: 25px;
+    overflow: visible;
+    cursor: pointer;
+}
+.m_close img{
+    width: 25px;
+    height: 25px;
+}
+
+    
+
+    /* 메인 */
+    #main_wrap{
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;;
+        max-width: 899px;
+    }
+    .sec01{
+        width: 100%;
+        margin: 0;
+        padding: 0
+    }
+    .sec02{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .sec02 .form_box{
+        padding: 0;
+    }
+    fieldset ul li{
+        padding-left: 0;
+    }
+    input{
+        font-size: 14px;
+    }
+    .nNt , .dNb{
+        display: flex;
+        flex-direction: column;
+    }
+    .name{
+        width: 100%;
+    }
+    .name label , .tel label , .address label{
+        width: 60px;
+    }
+    .tel{
+        width: 100%;
+    }
+    .button_box{
+        display: flex;
+        width: 100%;
+    }
+    .button_box button{
+        flex-basis: 100%;
+        flex-grow: 0;
+        margin-left: 0;
+        font-size: 14px;
+    }
+    
+    .due , .budget{
+        width: 100%;
+    }
+
+
+        /* 플로팅버튼 */
+
+    aside{
+        bottom: 35px;
+        right: 20px;
+    }
+    aside button{
+        width: 55px;
+        height: 55px;
+    }
+    aside button p{
+        font-size: 12px;
+    }
+    aside button:nth-child(2){
+        display: none;
+    }
+    aside button:nth-child(3){
+        display: none;
+    }
+
+
+    }
